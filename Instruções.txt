@@ -1,0 +1,3 @@
+Jogue todos arquivos em um zip e coloque em Documents\Visual Studio 2019\Templates\ProjectTemplates
+
+Infelizmente possui muitos defeitos esse template então optei por encerrar e ir criar template em dotnet CLI

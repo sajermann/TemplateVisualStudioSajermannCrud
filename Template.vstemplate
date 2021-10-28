@@ -1,0 +1,76 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+	<TemplateData>
+		<Name>Template Sajermann CRUD</Name>
+		<Description>Solution Template Complete</Description>
+		<ProjectType>CSharp</ProjectType>
+		<ProjectSubType></ProjectSubType>
+		<CreateNewFolder>false</CreateNewFolder>
+		<LocationField>Enabled</LocationField>
+		<EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+	</TemplateData>
+	<TemplateContent>
+	<Folder Name="batatinha">
+		<ProjectItem>.gitignore</ProjectItem>
+	</Folder>
+	<Folder Name="pipelines">
+		<ProjectItem
+			TargetFileName="\batata\.gitignore"
+			ReplaceParameters="true"
+			OpenInEditor="true"
+			OpenInWebBrowser="true"
+			OpenInHelpBrowser="true"
+			OpenOrder="Value">
+				\batata\.gitignore
+		</ProjectItem>
+		</Folder>
+<Folder Name="pipelines">
+		<ProjectItem
+			TargetFileName=".gitignore"
+			ReplaceParameters="true"
+			OpenInEditor="true"
+			OpenInWebBrowser="true"
+			OpenInHelpBrowser="true"
+			OpenOrder="Value">
+				.gitignore
+		</ProjectItem>
+		</Folder>
+
+		<Folder Name="pipelines">
+			<ProjectItem>pipeline-ci.yml</ProjectItem>
+		</Folder>
+		<Folder Name="deploy">
+			<ProjectItem>dockerfile.dockerfile</ProjectItem>
+		</Folder>
+		<Folder Name="NoUpGit">
+		</Folder>
+		<ProjectItem>.gitignore</ProjectItem>
+		<CustomParameters>
+			<CustomParameter Name="$rootnamespace$" Value="$ext_safeprojectname$" />
+		</CustomParameters>
+		<ProjectCollection>
+			<SolutionFolder Name="0. Presentation">
+				<ProjectTemplateLink ProjectName="WebApi" TargetFolderName="src" CopyParameters="true">
+					src\WebApi\WebApi.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="1. Application">
+				<ProjectTemplateLink ProjectName="Application" CopyParameters="true">
+					src\Application\Application.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="2. Domain">
+				<ProjectTemplateLink ProjectName="Domain" CopyParameters="true">
+					src\Domain\Domain.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+			<SolutionFolder Name="3. Infra">
+				<ProjectTemplateLink ProjectName="CrossCutting" CopyParameters="true">
+					src\CrossCutting\CrossCutting.vstemplate
+				</ProjectTemplateLink>
+				<ProjectTemplateLink ProjectName="Data" CopyParameters="true">
+					src\Data\Data.vstemplate
+				</ProjectTemplateLink>
+			</SolutionFolder>
+		</ProjectCollection>
+	</TemplateContent>
+</VSTemplate>

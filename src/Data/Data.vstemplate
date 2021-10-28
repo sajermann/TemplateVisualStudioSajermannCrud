@@ -1,0 +1,34 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Domain.Core</Name>
+    <Description>Camada de Domínio</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Domain.Core</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <CreateInPlace>true</CreateInPlace>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="src/Data.csproj" File="Data.csproj" ReplaceParameters="true">
+    <Folder Name="Context" TargetFolderName="Context">
+      <ProjectItem ReplaceParameters="true" TargetFileName="MyContext.cs">MyContext.cs</ProjectItem>
+    </Folder>
+    <Folder Name="Extensions" TargetFolderName="Extensions">
+      <ProjectItem ReplaceParameters="true" TargetFileName="IServiceCollectionExtension.cs">IServiceCollectionExtension.cs</ProjectItem>
+    </Folder>
+    <Folder Name="Interfaces" TargetFolderName="Interfaces">
+      <ProjectItem ReplaceParameters="true" TargetFileName="IGenericRepository.cs">IGenericRepository.cs</ProjectItem>
+    </Folder>
+    <Folder Name="Mapping" TargetFolderName="Mapping">
+      <ProjectItem ReplaceParameters="true" TargetFileName="UserMap.cs">UserMap.cs</ProjectItem>
+    </Folder>
+    <ProjectItem ReplaceParameters="true" TargetFileName="GenericRepository.cs">GenericRepository.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

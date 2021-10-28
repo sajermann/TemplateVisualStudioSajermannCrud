@@ -1,0 +1,17 @@
+trigger:
+  batch: false
+
+name: $(Date:yyyyMMdd)-$(Rev:r)
+
+resources:
+  repositories:
+    - repository: template
+      type: git
+      name: name
+      ref: refs/heads/release
+
+extends:
+  template: pipelines/sonarqube-csharp.yml@template
+  parameters:
+    SonarKey: 'key-${service-name}'
+    SonarName: 'key-${service-name}'
